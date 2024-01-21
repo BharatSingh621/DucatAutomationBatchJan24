@@ -1,0 +1,36 @@
+package Setup;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Demo {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		String driver_path="C:\\Users\\Bharat Singh\\eclipse-workspace\\SetupDemo\\Drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", driver_path);
+				
+		ChromeDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("file:///C:/Users/Bharat%20Singh/eclipse-workspace/SetupDemo/Practice%20Website/Practice.html");
+			
+		driver.findElement(By.className("inputs")).sendKeys("Rahul");	
+		
+		Thread.sleep(1000);	
+
+		boolean status = driver.findElement(By.xpath("//input[@value='option2']")).isSelected();
+		
+		if(!status) 
+		{
+			driver.findElement(By.xpath("//input[@value='option2']")).click();
+		}
+		
+		
+		driver.close();
+		
+		
+		
+	}
+
+}

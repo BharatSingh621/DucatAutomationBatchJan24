@@ -1,5 +1,31 @@
-Example
+package Ducat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
 
-This is our first Home test case file.
-Today date: 21/1/24
-time: 1:17 PM.
+
+public class First {
+
+	public static void main(String[] args) {
+
+       
+		Scanner myObj= new Scanner(System.in);
+		
+		System.out.println("Please enter first number: ");
+		int a = myObj.nextInt();
+		
+		System.out.println("Please enter second number: ");
+		int b = myObj.nextInt();
+		
+		
+		int sum = a+b;
+		
+		System.out.println("The sum of a and b is: " + sum);
+       
+       
+       
+
+	}
+}
